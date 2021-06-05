@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="verification" content="c0bcaee367d5fe31ef54243e8883e2" />
+    <title>cyberlawyer</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<script>
+    function scrolltocontacts(){
+        document.querySelector(`.Contacts`).scrollIntoView({
+            behavior: 'smooth', // smooth scroll
+            block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+        })
+    }
+    function scrolltoservices(){
+        document.querySelector(`.Skills`).scrollIntoView({
+            behavior: 'smooth', // smooth scroll
+            block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+        })
+    }
+    function scrolltoabout(){
+        document.querySelector(`.About`).scrollIntoView({
+            behavior: 'smooth', // smooth scroll
+            block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+        })
+    }
+    function scrolltoform(){
+        document.querySelector(`.FormContainer`).scrollIntoView({
+            behavior: 'smooth', // smooth scroll
+            block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+        })
+        setTimeout(() => document.querySelector('#contact').focus(), 750)
+    }
+</script>
+<body>
+    <div class="Header">
+        <div class="Header__menu">
+            <span class="Header__menuBorder"></span>
+            <span class="Header__menuBorder Header__menuBorder_bottom"></span>
+            <div onclick="scrolltoservices()" class="Header__menuItem">УСЛУГИ</div>
+            <div onclick="scrolltoabout()" class="Header__menuItem">О НАС</div>
+            <div onclick="scrolltocontacts()" class="Header__menuItem">КОНТАКТЫ</div>
+        </div>
+    </div>
+    <div class="Moto">
+        <img class="Moto__sun" src=<%=require("Static/sun.png")%> >
+        <div class="Moto__gradient"></div>
+        <div class="Moto__grid"></div>
+        <img class="Moto__logo" src=<%=require("Static/streamlegal.png")%> >
+        <img class="Moto__city" src=<%=require("Static/city.png")%> >
+    </div>
+    <div class="About">
+        <div class="About__title">
+            <div class="About__lineContainer">
+                <div class="About__lineMerger">
+                    <span class="About__line About__line_one"></span>
+                    <span class="About__line About__line_two"></span>
+                    <span class="About__line About__line_three"></span>
+                    <span class="About__line About__line_four"></span>
+                </div>
+                <div class="About__lineMerger">
+                    <span class="About__line About__line_one"></span>
+                    <span class="About__line About__line_two"></span>
+                    <span class="About__line About__line_three"></span>
+                    <span class="About__line About__line_four"></span>
+                </div>
+                <div class="About__lineMerger">
+                    <span class="About__line About__line_one"></span>
+                    <span class="About__line About__line_two"></span>
+                    <span class="About__line About__line_three"></span>
+                    <span class="About__line About__line_four"></span>
+                </div>
+            </div>
+            <h1 class="purpleHeader">ЛЕГАЛИЗУЕМ ДОХОД СТРИМЕРА<br> БЫСТРО И НЕДУШНО</h1>
+            <div class="About__lineContainer About__lineContainer_right">
+                <div class="About__lineMerger">
+                    <span class="About__line About__line_one"></span>
+                    <span class="About__line About__line_two"></span>
+                    <span class="About__line About__line_three"></span>
+                    <span class="About__line About__line_four"></span>
+                </div>
+                <div class="About__lineMerger">
+                    <span class="About__line About__line_one"></span>
+                    <span class="About__line About__line_two"></span>
+                    <span class="About__line About__line_three"></span>
+                    <span class="About__line About__line_four"></span>
+                </div>
+                <div class="About__lineMerger">
+                    <span class="About__line About__line_one"></span>
+                    <span class="About__line About__line_two"></span>
+                    <span class="About__line About__line_three"></span>
+                    <span class="About__line About__line_four"></span>
+                </div>
+            </div>
+        </div>
+        <div class="About__list">
+            <div class="About__item About__item_1">
+                <img src=<%=require("Static/item1.png")%> class="About__itemImg">
+                <p class="About__itemText">Займемся твоим юридическим статусом</p>
+            </div>
+            <div class="About__item About__item_2">
+                <img src=<%=require("Static/item2.png")%> class="About__itemImg">
+                <p class="About__itemText">Подружим налоги и бухгалтерию</p>
+            </div>
+            <div class="About__item About__item_3">
+                <img src=<%=require("Static/item3.png")%> class="About__itemImg">
+                <p class="About__itemText">Поможем договориться с рекламодателями</p>
+            </div>
+            <div class="About__item About__item_4">
+                <img src=<%=require("Static/item4.png")%> class="About__itemImg">
+                <p class="About__itemText">Подключим юриста-саппорта</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="FormContainer">
+        <img src=<%=require("Static/feedback.png")%> class="Form__heart">
+        <?php
+            if(!isset($_POST['contact'])){
+        ?>
+        <form class="Form" action="" method="POST" enctype="multipart/form-data">
+            <div class="Form__pulse Form__pulse_first">
+                <img src=<%=require("Static/pulse.svg")%>>
+                <div class="Form__pulseIn"></div>
+                <div class="Form__pulseOut"></div>
+            </div>
+            <div class="Form__pulse Form__pulse_flat Form__pulse_second">
+                <div class="Form__pulse_flatLine"></div>
+                <div class="Form__pulseIn"></div>
+                <div class="Form__pulseOut"></div>
+            </div>
+            <div class="Form__pulse Form__pulse_right Form__pulse_third">
+                <img src=<%=require("Static/pulse_right.svg")%>>
+                <div class="Form__pulseIn"></div>
+                <div class="Form__pulseOut"></div>
+            </div>
+
+            <div class="Form__title purpleHeader">НАПИСАТЬ НАМ</div>
+            <div class="Input">
+                <div class="Input__container">
+                    <input type="text" id="contact" name="contact" placeholder="Контакт для связи">
+                    <span class="Input__bottomline"></span>
+                </div>
+            </div>
+            <button class="cybr-btn" type="submit">Отправить<span aria-hidden>_</span>
+                <span aria-hidden class="cybr-btn__glitch">Отправить_</span>
+            </button>
+            <input type="hidden" name="action" value="Submit">
+        </form>
+        <?php
+            } else {
+                //показываем форму
+                $contact = $_POST['contact'];
+
+                $contact = htmlspecialchars($contact);
+
+                if (mail("legalstreamdealy@gmail.com", "Заказ с сайта", "Имя:".$name.". Контакт: ".$contact ,"From: new-client@legalstream.site \r\n"))
+                {
+                echo "<p class=\"Bullets__text\">Заявка принята!</p>";
+        } else {
+        echo "<p class=\"Bullets__text\">При отправке сообщения возникли ошибки</p>";
+        }
+        }
+        ?>
+    </div>
+
+    <div class="Skills">
+        <div class="Skills__breaker Skills__breaker_1"></div>
+        <div class="Skills__breaker Skills__breaker_2"></div>
+        <div class="Skills__breaker Skills__breaker_3"></div>
+        <div class="Skills__breaker Skills__breaker_4"></div>
+        <div class="Skills__body">
+            <img src=<%=require("Static/services.png")%> class="Skills__triangle">
+            <div class="Skills__row">
+                <div class="Skills__item">
+                    <img src=<%=require("Static/skill1.png")%>>
+                    <div class="Skills__itemTitle">Налоги и бухгалтерия</div>
+                    <div class="Skills__itemText">
+                        Зарегистрируем тебя как юр.лицо <br>
+                        Настроим все необходимые процессы <br>
+                        Посчитаем как надо, Отправим все вовремя
+                    </div>
+                </div>
+                <div class="Skills__item">
+                    <img src=<%=require("Static/skill2.png")%>>
+                    <div class="Skills__itemTitle">Документооборот</div>
+                    <div class="Skills__itemText">
+                        Проверим все документы <br>
+                        Обеспечим защиту твоих интересов <br>
+                        Составим свой вариант
+                    </div>
+                </div>
+            </div>
+            <div class="Skills__item Skills__item_single">
+                <img src=<%=require("Static/skill3.png")%>>
+                <div class="Skills__itemTitle">Юрист-саппорт</div>
+                <div class="Skills__itemText">
+                    Объяснит каждую деталь <br>
+                    Займется серьезными вопросами
+                </div>
+            </div>
+            <button class="cybr-btn cybr-btn_wide" onclick="scrolltoform()">Я в этом не разбираюсь<span aria-hidden>_</span>
+                <span aria-hidden class="cybr-btn__glitch">Я в этом не разбираюсь_</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="Contacts">
+        <div class="Contacts__row">
+            <a href="https://discord.gg/n2V38HWt" target="_blank">Discord</a>
+            <a href="https://t.me/joinchat/Y4qfMvPjWfsxOTBi" target="_blank">Telegram</a>
+            <a class="Contacts__item" href="mailto:privet@streamlegal.ru">privet@streamlegal.ru</a>
+        </div>
+        <div class="Contacts__row">
+            <p>Copyright © 2021 ООО «СТРИМ-ЛЕГАЛ»</p>
+        </div>
+    </div>
+</body>
+</html>
